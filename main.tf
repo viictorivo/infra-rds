@@ -27,17 +27,6 @@ module "vpc" {
 
 }
 
-variable "db_username" {
-  description = "The username for the RDS instance"
-  type        = string
-}
-
-variable "db_password" {
-  description = "The password for the RDS instance"
-  type        = string
-  sensitive   = true
-}
-
 module "rds" {
   source      = "./modules/rds"
   db_username = var.db_username
