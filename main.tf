@@ -29,6 +29,6 @@ module "vpc" {
 
 module "rds" {
   source      = "./modules/rds"
-  db_username = var.DB_USER
-  db_password = var.DB.PASSWORD
+  db_username = var.db_username
+  db_password = var.db_password
 }
