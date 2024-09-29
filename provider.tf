@@ -18,13 +18,13 @@ terraform {
   }
 
   backend "remote" {
-		hostname = "app.terraform.io"
-		organization = "victor-postech-fiap"
+    hostname     = "app.terraform.io"
+    organization = "victor-postech-fiap"
 
-		workspaces {
-			name = "AWSEKS"
-		}
-	}
+    workspaces {
+      name = "AWSEKS"
+    }
+  }
 }
 
 data "aws_eks_cluster" "cluster" {
