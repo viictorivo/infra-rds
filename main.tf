@@ -29,6 +29,6 @@ module "vpc" {
 
 module "rds" {
   source      = "./modules/rds"
-  db_username = secrets.DB_USER
-  db_password = secrets.DB_PASSWORD
+  db_username = process.env.DB_USER
+  db_password = process.env.DB_PASSWORD
 }
