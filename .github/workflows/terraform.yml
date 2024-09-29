@@ -7,7 +7,7 @@ on:
 
 jobs:
   Plan:
-    uses: viictorivo/infra-eks-order-system-/.github/workflows/plan.yml@main
+    uses: viictorivo/odersystem-infra/.github/workflows/plan.yml@main
     with:
       gh_environment: dev
     secrets:
@@ -15,7 +15,7 @@ jobs:
 
   Apply:
     needs: Plan
-    uses: viictorivo/infra-eks-order-system-/.github/workflows/apply.yml@main
+    uses: viictorivo/odersystem-infra/.github/workflows/apply.yml@main
     with:
       gh_environment: dev
     secrets:
